@@ -9,10 +9,6 @@ bool visit[10] = { false, };
 
 // DFS 실행
 void dfs(int idx, int dist, int planet) {
-	// 이미 정답보다 거리가 커서 돌 필요 없음
-	if (ans < dist)
-		return;
-
 	// 행성 방문을 다했어요
 	if (planet == node) {
 		ans = min(ans, dist);
@@ -28,8 +24,8 @@ void dfs(int idx, int dist, int planet) {
 
 int main() {
 	ios_base::sync_with_stdio(false); 
-    cin.tie(NULL); 
-    cout.tie(NULL);
+	cin.tie(NULL); 
+	cout.tie(NULL);
 	
 	// 입력
 	cin >> node >> start;
